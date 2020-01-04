@@ -1,0 +1,5 @@
+python train_frcnn.py --network vgg -o simple -p ./demo_input.txt --rpn ./models/rpn/rpn.vgg.weights.48-0.01.hdf5 --num_epochs=1 --elen 100 --output_weight_path ./OUTPUT.hdf5
+
+
+
+python test_frcnn.py --network vgg16 -p ./demo_input.txt --load ./OUTPUT.hdf5 --write
